@@ -1,0 +1,82 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.app {
+  display: flex;
+  justify-content: center;
+  .appWrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    width: 1444px;
+    .leftSide {
+      .location {
+        border: 1px solid $border-color;
+        padding: 20px;
+        margin: 20px 0;
+        p {
+          padding: 10px 0;
+        }
+      }
+      .map {
+        height: 700px;
+      }
+    }
+    .rightSide {
+      .time {
+        border: 1px solid $border-color;
+        padding: 20px;
+        margin: 20px 0;
+        p {
+          padding: 10px 0;
+        }
+      }
+      .people {
+        border: 1px solid $border-color;
+        padding: 20px;
+        margin: 20px 0;
+        .person {
+          border: 1px solid $border-color;
+          padding: 20px;
+          margin: 20px 0;
+          border-radius: 50px;
+          display: flex;
+          .avatar {
+            margin-right: 20px;
+            width: 40px;
+            height: 40px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .info {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+    .amount {
+      border: 1px solid $border-color;
+      padding: 20px;
+      margin: 20px 0;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 1444px) {
+    .appWrapper {
+      max-width: 1000px;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .appWrapper {
+      padding: 40px;
+      display: block;
+    }
+  }
+}
